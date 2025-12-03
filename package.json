@@ -1,5 +1,5 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "portfolio-albert-mayele",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,13 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "description": "Portfolio personnel d'Albert Mayele — développeur créatif.",
+  "author": "Albert Mayele",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noelmayele02-droid/portfolio-albert-mayele.git"
+  },
+  "homepage": "",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",

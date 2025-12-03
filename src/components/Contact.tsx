@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, Twitter, Phone } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -54,7 +54,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-display font-semibold mb-1">Email</h3>
-                <p className="text-muted-foreground">contact@monportfolio.com</p>
+                <p className="text-muted-foreground">
+                  <a href="mailto:albertisaacnoel.mayele@ynov.com" className="hover:text-foreground transition-colors">albertisaacnoel.mayele@ynov.com</a>
+                </p>
               </div>
             </div>
             
@@ -65,6 +67,30 @@ const Contact = () => {
               <div>
                 <h3 className="font-display font-semibold mb-1">Localisation</h3>
                 <p className="text-muted-foreground">Paris, France</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-display font-semibold mb-1">Téléphone</h3>
+                <p className="text-muted-foreground">
+                  <a href="tel:+33652861159" className="hover:text-foreground transition-colors">+33 6 52 86 11 59</a>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-display font-semibold mb-1">WhatsApp</h3>
+                <p className="text-muted-foreground">
+                  <a href="https://wa.me/242068498792" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">+242 068 498 792</a>
+                </p>
               </div>
             </div>
 

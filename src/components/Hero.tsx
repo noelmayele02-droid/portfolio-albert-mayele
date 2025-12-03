@@ -6,6 +6,7 @@ import profile1 from "@/assets/WhatsApp Image 2025-11-08 at 18.04.26 (1).jpeg";
 import profile2 from "@/assets/WhatsApp Image 2025-11-08 at 18.04.27 (2).jpeg";
 import profile3 from "@/assets/WhatsApp Image 2025-11-08 at 18.04.27 (3).jpeg";
 import TypeWriter from "./TypeWriter";
+import GlassCard from "./ui/GlassCard";
 
 const profileImages = [profile1, profile2, profile3];
 
@@ -48,6 +49,8 @@ const Hero = () => {
 
   return (
     <section id="accueil" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Waouh rotating conic gradient */}
+      <div className="waouh-gradient" aria-hidden />
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -183,28 +186,24 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <motion.a
-              href="#projets"
-              className="px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all glow-effect relative overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="relative z-10">Voir mes projets</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "100%" }}
-                transition={{ duration: 0.5 }}
-              />
-            </motion.a>
-            <motion.a
-              href="#apropos"
-              className="px-8 py-4 border border-border text-foreground font-medium rounded-full hover:bg-secondary transition-all hover:border-primary/50 relative overflow-hidden"
-              whileHover={{ scale: 1.05, borderColor: "hsl(38 92% 50%)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              En savoir plus
-            </motion.a>
+            <GlassCard className="flex items-center gap-4">
+              <motion.a
+                href="#projets"
+                className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all glow-effect relative overflow-hidden group btn-primary"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                <span className="relative z-10">Voir mes projets</span>
+              </motion.a>
+              <motion.a
+                href="#apropos"
+                className="px-5 py-2 border border-border text-foreground font-medium rounded-full hover:bg-secondary transition-all hover:border-primary/50"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                En savoir plus
+              </motion.a>
+            </GlassCard>
           </motion.div>
         </div>
         <br/><br/><br/><br/><br/>

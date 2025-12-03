@@ -30,9 +30,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#accueil" className="font-display text-xl font-semibold text-foreground hover:text-primary transition-colors">
-          Albert MAYELE<span className="text-primary">.</span>
+          <span className="relative inline-flex items-center">
+            <span className="absolute -inset-2 rounded-full bg-primary/10 blur-xl" aria-hidden />
+            Albert MAYELE<span className="text-primary">.</span>
+          </span>
         </a>
-        
+
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
             <motion.li
